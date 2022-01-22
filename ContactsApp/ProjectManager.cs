@@ -20,6 +20,6 @@ namespace ContactsApp
         /// Путь до файла приложения.
         /// </summary>
         private static string ProjectFilePath =>
-            ContactsAppFolder + "Contacts.json";
+            ContactsAppFolder + "Contacts.notes";
     }
 }

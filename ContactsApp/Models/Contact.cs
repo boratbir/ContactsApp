@@ -87,9 +87,9 @@ namespace ContactsApp.Models
             get => _birthday;
             set
             {
-                if (value < MinDate)
+                if (value < MinDate || value > DateTime.Now)
                     throw new ArgumentException("Дата рождения не должна быть" +
-                                                "ранее 1.1.1900.");
+                                                "ранее 1.1.1900 или позже сегодняшнего дня.");
                 _birthday = value;
             }
         }
