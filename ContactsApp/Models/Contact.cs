@@ -44,6 +44,11 @@ namespace ContactsApp.Models
         private string _email = string.Empty;
 
         /// <summary>
+        /// Поле номера телефона.
+        /// </summary>
+        private PhoneNumber _phoneNumber = new PhoneNumber();
+
+        /// <summary>
         /// Имя контакта.
         /// </summary>
         /// <exception cref="ArgumentException">Длина имени больше 50 символов.</exception>
@@ -117,6 +122,16 @@ namespace ContactsApp.Models
                     throw new ArgumentException("ID ВК не может быть длинее 50 символов.");
                 _vkId = value;
             }
+        }
+
+        /// <summary>
+        /// Номер телефона.
+        /// </summary>
+        /// <exception cref="ArgumentException">Номер телефона не соответствует российскому стандарту.</exception>
+        public long PhoneNumber
+        {
+            get => _phoneNumber.Number;
+            set => _phoneNumber.Number = value;
         }
         
         /// <summary>
