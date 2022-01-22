@@ -43,6 +43,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Models\Contact.cs" />
+        <Compile Include="Models\PhoneNumber.cs" />
         <Compile Include="Project.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
