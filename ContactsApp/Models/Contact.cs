@@ -74,6 +74,22 @@ namespace ContactsApp.Models
         }
 
         /// <summary>
+        /// Дата рождения контакта.
+        /// </summary>
+        /// <exception cref="ArgumentException">Дата рождения ранее 1.1.1900.</exception>
+        public DateTime Birthday
+        {
+            get => _birthday;
+            set
+            {
+                if (value < MinDate)
+                    throw new ArgumentException("Дата рождения не должна быть" +
+                                                "ранее 1.1.1900.");
+                _birthday = value;
+            }
+        }
+
+        /// <summary>
         /// E-Mail контакта.
         /// </summary>
         /// <exception cref="ArgumentException">Длина E-Mail длинее 50 символов.</exception>
