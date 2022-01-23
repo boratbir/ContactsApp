@@ -54,6 +54,9 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <EmbeddedResource Include="MainForm.resx">
+          <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,6 +84,12 @@
         <Project>{ccb2a7db-028e-41ed-89cd-6978d03f5c1a}</Project>
         <Name>ContactsApp</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\Add.png" />
+      <Content Include="Resources\Contacts.png" />
+      <Content Include="Resources\Delete.png" />
+      <Content Include="Resources\Edit.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
