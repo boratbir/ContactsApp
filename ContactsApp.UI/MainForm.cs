@@ -232,13 +232,28 @@ namespace ContactsApp.UI
             // Обновляем данные
             SetVisibleData();
         }
-
+        
         /// <summary>
         /// Обрабатывает событие нажатия на кнопку выхода.
         /// </summary>
         private void OnExitButtonClicked(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /// <summary>
+        /// Обрабатывает событие нажатия на кнопку "О программе"
+        /// </summary>
+        private void OnAboutButtonClicked(object sender, EventArgs e)
+        {
+            var aboutForm = new AboutForm();
+            Enabled = false;
+            using (aboutForm)
+            {
+                aboutForm.ShowDialog();
+            }
+
+            Enabled = true;
         }
     }
 }

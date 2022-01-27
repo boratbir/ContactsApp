@@ -90,7 +90,7 @@
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.exitMenuItem.Size = new System.Drawing.Size(136, 30);
             this.exitMenuItem.Text = "Выход";
             this.exitMenuItem.Click += new System.EventHandler(this.OnExitButtonClicked);
             // 
@@ -134,6 +134,7 @@
             this.aboutMenuItem.Name = "aboutMenuItem";
             this.aboutMenuItem.Size = new System.Drawing.Size(197, 30);
             this.aboutMenuItem.Text = "О программе";
+            this.aboutMenuItem.Click += new System.EventHandler(this.OnAboutButtonClicked);
             // 
             // tableLayoutPanel
             // 
@@ -420,7 +421,7 @@
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 700);
             this.Name = "MainForm";
-            this.Text = "ContactsApp";
+            this.Text = "Контакты";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.tableLayoutPanel.ResumeLayout(false);
