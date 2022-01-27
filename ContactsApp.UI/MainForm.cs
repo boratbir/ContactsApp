@@ -232,5 +232,13 @@ namespace ContactsApp.UI
             // Обновляем данные
             SetVisibleData();
         }
+
+        /// <summary>
+        /// Обрабатывает событие нажатия на кнопку выхода.
+        /// </summary>
+        private void OnExitButtonClicked(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

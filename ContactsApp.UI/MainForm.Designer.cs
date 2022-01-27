@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,8 +90,9 @@
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(136, 30);
+            this.exitMenuItem.Size = new System.Drawing.Size(152, 30);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.OnExitButtonClicked);
             // 
             // editMenuItem
             // 
@@ -415,6 +417,7 @@
             this.ClientSize = new System.Drawing.Size(878, 653);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 700);
             this.Name = "MainForm";
             this.Text = "ContactsApp";
