@@ -104,18 +104,21 @@
             this.addContactMenuItem.Name = "addContactMenuItem";
             this.addContactMenuItem.Size = new System.Drawing.Size(272, 30);
             this.addContactMenuItem.Text = "Добавить контакт";
+            this.addContactMenuItem.Click += new System.EventHandler(this.OnAddButtonClicked);
             // 
             // editContactMenuItem
             // 
             this.editContactMenuItem.Name = "editContactMenuItem";
             this.editContactMenuItem.Size = new System.Drawing.Size(272, 30);
             this.editContactMenuItem.Text = "Редактировать контакт";
+            this.editContactMenuItem.Click += new System.EventHandler(this.OnEditButtonClicked);
             // 
             // deleteContactMenuItem
             // 
             this.deleteContactMenuItem.Name = "deleteContactMenuItem";
             this.deleteContactMenuItem.Size = new System.Drawing.Size(272, 30);
             this.deleteContactMenuItem.Text = "Удалить контакт";
+            this.deleteContactMenuItem.Click += new System.EventHandler(this.OnRemoveButtonClicked);
             // 
             // helpMenuItem
             // 
@@ -343,6 +346,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(213, 26);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.OnQueryChanged);
             // 
             // contactsListBox
             // 
@@ -353,6 +357,7 @@
             this.contactsListBox.Name = "contactsListBox";
             this.contactsListBox.Size = new System.Drawing.Size(288, 484);
             this.contactsListBox.TabIndex = 2;
+            this.contactsListBox.SelectedValueChanged += new System.EventHandler(this.OnSelectedContactChanged);
             // 
             // buttonsPanel
             // 
@@ -375,6 +380,7 @@
             this.buttonDelete.Size = new System.Drawing.Size(44, 44);
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.OnRemoveButtonClicked);
             // 
             // buttonEdit
             // 
@@ -385,6 +391,7 @@
             this.buttonEdit.Size = new System.Drawing.Size(44, 44);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.OnEditButtonClicked);
             // 
             // buttonAdd
             // 
@@ -395,6 +402,7 @@
             this.buttonAdd.Size = new System.Drawing.Size(44, 44);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.OnAddButtonClicked);
             // 
             // errorProvider
             // 

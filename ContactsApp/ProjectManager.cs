@@ -40,6 +40,11 @@ namespace ContactsApp
         {
             try
             {
+                if (!File.Exists(path))
+                {
+                    File.Create(path);
+                    return "";
+                }
                 var bytes = File.ReadAllBytes(path);
                 var text = Encoding.UTF8.GetString(bytes);
                 return text;
@@ -83,7 +88,7 @@ namespace ContactsApp
                 Directory.CreateDirectory(ContactsAppFolder);
                 var text = ReadFile(ProjectFilePath);
                 var project = JsonConvert.DeserializeObject<Project>(text);
-                return project;
+                return project ?? new Project();
             }
             catch (Exception e)
             {

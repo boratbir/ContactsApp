@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using ContactsApp.Models;
 
@@ -9,7 +10,7 @@ namespace ContactsApp
         /// <summary>
         /// Список контактов.
         /// </summary>
-        public List<Contact> Contacts { get; } = new List<Contact>();
+        public List<Contact> Contacts { get; set; } = new List<Contact>();
 
         /// <summary>
         /// Осуществляет поиск по контактам.

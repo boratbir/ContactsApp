@@ -5,7 +5,7 @@ namespace ContactsApp.Models
     /// <summary>
     /// Содержит информацию о контакте
     /// </summary>
-    public class Contact
+    public class Contact : ICloneable
     {
         /// <summary>
         /// Минимально допустимая дата рождения.
@@ -142,5 +142,18 @@ namespace ContactsApp.Models
         /// иначе ложь.</returns>
         private static bool TextIsCorrect(string text) => 
             text != null && text.Length <= MaxTextLength;
+
+        public object Clone()
+        {
+            return new Contact()
+            {
+                FirstName = FirstName,
+                LastName = LastName,
+                PhoneNumber = PhoneNumber,
+                Email = Email,
+                VkId = VkId,
+                Birthday = Birthday
+            };
+        }
     }
 }
