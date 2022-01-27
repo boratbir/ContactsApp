@@ -5,6 +5,9 @@ using ContactsApp.Models;
 
 namespace ContactsApp
 {
+    /// <summary>
+    /// Класс проекта. Хранит в себе список контактов.
+    /// </summary>
     public class Project
     {
         /// <summary>

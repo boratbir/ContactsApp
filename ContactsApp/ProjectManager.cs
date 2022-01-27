@@ -96,6 +96,11 @@ namespace ContactsApp
             }
         }
 
+        /// <summary>
+        /// Сохраняет проект в файл.
+        /// </summary>
+        /// <param name="project">Объект проекта.</param>
+        /// <exception cref="Exception">Бросается при ошибке сохранения.</exception>
         public static void SaveProject(this Project project)
         {
             try

@@ -41,6 +41,8 @@ namespace ContactsApp.UI
             _project = ProjectManager.ReadProject();
             // В списке контактов будут отображаться фамилии
             contactsListBox.DisplayMember = nameof(Contact.LastName);
+            // Обновление данных
+            SetVisibleData();
         }
 
         /// <summary>
@@ -79,7 +81,6 @@ namespace ContactsApp.UI
             // Если выбрано пустое место или индекс превышает фактическое количество контактов
             if (index == -1 || index > _project.Contacts.Count - 1)
             {
-                index = -1;
                 // Стирание детальных данных
                 SetDetails(false);
                 SetEditButtons(false);
@@ -153,6 +154,7 @@ namespace ContactsApp.UI
             }
             // Обновление данных
             SetVisibleData();
+            _project.SaveProject();
         }
         
         /// <summary>
@@ -171,6 +173,7 @@ namespace ContactsApp.UI
             }
             // Обновление данных
             SetVisibleData();
+            _project.SaveProject();
         }
 
         /// <summary>
@@ -183,6 +186,7 @@ namespace ContactsApp.UI
             if (index < contactsListBox.Items.Count)
                 contactsListBox.SelectedIndex = index;
             SetVisibleData();
+            _project.SaveProject();
         }
         
         /// <summary>
