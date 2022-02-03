@@ -21,11 +21,6 @@ namespace ContactsApp.UnitTests
             // Создание нового пустого номера телефона
             _phoneNumber = new PhoneNumber();
         }
-
-        private static bool NumberIsValid(long value)
-        {
-            return value >= 70000000000 && value <= 79999999999;
-        }
         
         /// <summary>
         /// Позитивный тест геттера Number.
