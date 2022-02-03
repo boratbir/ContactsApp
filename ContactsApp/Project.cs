@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using ContactsApp.Models;
@@ -22,6 +23,15 @@ namespace ContactsApp
         /// <returns>Список контактов, чья фамилия начинается с заданной подстроки.</returns>
         public List<Contact> Find(string substring) => Contacts
             .Where(i => i.LastName.StartsWith(substring))
+            .OrderBy(k => k.LastName)
+            .ToList();
+
+        /// <summary>
+        /// Возвращает список именинников.
+        /// </summary>
+        public List<Contact> BirthdayPeople => Contacts?
+            .Where(i => i.Birthday.DayOfYear == DateTime.Today.DayOfYear)
+            .OrderBy(k => k.LastName)
             .ToList();
     }
 }
