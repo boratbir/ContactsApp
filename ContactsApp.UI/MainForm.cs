@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using ContactsApp.Models;
 
@@ -10,6 +11,11 @@ namespace ContactsApp.UI
     /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Шаблон списка именинников.
+        /// </summary>
+        private const string BirthdaysTemplate = "Сегодня день рождения празднуют: ";
+        
         /// <summary>
         /// Поле проекта.
         /// </summary>
@@ -55,6 +61,28 @@ namespace ContactsApp.UI
             _contacts = new BindingList<Contact>(_project.Find(_searchQuery));
             // Привязка. Нужна для обновления данных.
             contactsListBox.DataSource = _contacts;
+
+            // Отображение или сокрытие информации об именинниках
+            if (_project.BirthdayPeople.Count > 0)
+            {
+                panelBirthdays.Visible = true;
+                var birthdayText = BirthdaysTemplate;
+                for (var i = 0; i < _project.BirthdayPeople.Count; i++)
+                {
+                    birthdayText += _project.BirthdayPeople[i].LastName;
+                    if (i == _project.BirthdayPeople.Count - 1)
+                        birthdayText += '.';
+                    else
+                        birthdayText += ", ";
+                }
+
+                labelBirthdays.Text = birthdayText;
+            }
+            else
+            {
+                panelBirthdays.Visible = false;
+            }
+            
             // Если список пуст, то убрать выделение контакта
             if (contactsListBox.Items.Count == 0)
             {

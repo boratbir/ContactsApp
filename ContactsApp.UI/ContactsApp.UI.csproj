@@ -103,6 +103,8 @@
       <Content Include="Resources\Contacts.png" />
       <Content Include="Resources\Delete.png" />
       <Content Include="Resources\Edit.png" />
+      <Content Include="Resources\Info.png" />
+      <Content Include="Resources\Info1.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

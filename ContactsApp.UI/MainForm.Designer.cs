@@ -46,7 +46,6 @@
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
-            this.labelBirthday = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
@@ -63,12 +62,17 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelBirthdays = new System.Windows.Forms.Panel();
+            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
+            this.labelBirthdays = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.tableLayoutPanellnfo.SuspendLayout();
             this.leftTablePanel.SuspendLayout();
             this.buttonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider)).BeginInit();
+            this.panelBirthdays.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -156,12 +160,10 @@
             this.tableLayoutPanellnfo.ColumnCount = 2;
             this.tableLayoutPanellnfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanellnfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanellnfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanellnfo.Controls.Add(this.labelVk, 0, 5);
             this.tableLayoutPanellnfo.Controls.Add(this.labelFirstName, 0, 1);
             this.tableLayoutPanellnfo.Controls.Add(this.labelLastName, 0, 0);
             this.tableLayoutPanellnfo.Controls.Add(this.textBoxLastName, 1, 0);
-            this.tableLayoutPanellnfo.Controls.Add(this.labelBirthday, 0, 2);
             this.tableLayoutPanellnfo.Controls.Add(this.labelPhone, 0, 3);
             this.tableLayoutPanellnfo.Controls.Add(this.labelEmail, 0, 4);
             this.tableLayoutPanellnfo.Controls.Add(this.textBoxFirstName, 1, 1);
@@ -169,17 +171,20 @@
             this.tableLayoutPanellnfo.Controls.Add(this.textBoxPhone, 1, 3);
             this.tableLayoutPanellnfo.Controls.Add(this.textBoxEmail, 1, 4);
             this.tableLayoutPanellnfo.Controls.Add(this.textBoxVk, 1, 5);
+            this.tableLayoutPanellnfo.Controls.Add(this.panelBirthdays, 0, 7);
             this.tableLayoutPanellnfo.Location = new System.Drawing.Point(304, 4);
             this.tableLayoutPanellnfo.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanellnfo.Name = "tableLayoutPanellnfo";
-            this.tableLayoutPanellnfo.RowCount = 6;
+            this.tableLayoutPanellnfo.RowCount = 8;
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanellnfo.Size = new System.Drawing.Size(546, 240);
+            this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanellnfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanellnfo.Size = new System.Drawing.Size(546, 595);
             this.tableLayoutPanellnfo.TabIndex = 1;
             // 
             // labelVk
@@ -225,17 +230,6 @@
             this.textBoxLastName.ReadOnly = true;
             this.textBoxLastName.Size = new System.Drawing.Size(373, 26);
             this.textBoxLastName.TabIndex = 1;
-            // 
-            // labelBirthday
-            // 
-            this.labelBirthday.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelBirthday.Location = new System.Drawing.Point(4, 84);
-            this.labelBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelBirthday.Name = "labelBirthday";
-            this.labelBirthday.Size = new System.Drawing.Size(156, 31);
-            this.labelBirthday.TabIndex = 4;
-            this.labelBirthday.Text = "Дата рождения:";
-            this.labelBirthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelPhone
             // 
@@ -411,6 +405,34 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // panelBirthdays
+            // 
+            this.tableLayoutPanellnfo.SetColumnSpan(this.panelBirthdays, 2);
+            this.panelBirthdays.Controls.Add(this.labelBirthdays);
+            this.panelBirthdays.Controls.Add(this.pictureBoxInfo);
+            this.panelBirthdays.Location = new System.Drawing.Point(3, 448);
+            this.panelBirthdays.Name = "panelBirthdays";
+            this.panelBirthdays.Size = new System.Drawing.Size(539, 142);
+            this.panelBirthdays.TabIndex = 12;
+            // 
+            // pictureBoxInfo
+            // 
+            this.pictureBoxInfo.BackgroundImage = global::ContactsApp.UI.Properties.Resources.Info;
+            this.pictureBoxInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxInfo.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxInfo.Name = "pictureBoxInfo";
+            this.pictureBoxInfo.Size = new System.Drawing.Size(136, 136);
+            this.pictureBoxInfo.TabIndex = 0;
+            this.pictureBoxInfo.TabStop = false;
+            // 
+            // labelBirthdays
+            // 
+            this.labelBirthdays.Location = new System.Drawing.Point(145, 3);
+            this.labelBirthdays.Name = "labelBirthdays";
+            this.labelBirthdays.Size = new System.Drawing.Size(391, 136);
+            this.labelBirthdays.TabIndex = 1;
+            this.labelBirthdays.Text = "Именинники: ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -431,9 +453,16 @@
             this.leftTablePanel.PerformLayout();
             this.buttonsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider)).EndInit();
+            this.panelBirthdays.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label labelBirthdays;
+
+        private System.Windows.Forms.Panel panelBirthdays;
+        private System.Windows.Forms.PictureBox pictureBoxInfo;
 
         private System.Windows.Forms.ErrorProvider errorProvider;
 
@@ -442,7 +471,6 @@
         private System.Windows.Forms.Label labelFirstName;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.TextBox textBoxLastName;
-        private System.Windows.Forms.Label labelBirthday;
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxFirstName;

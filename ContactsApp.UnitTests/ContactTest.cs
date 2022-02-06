@@ -140,7 +140,9 @@ namespace ContactsApp.UnitTests
         [TestCase("1.1.1000",
             "Слишком маленькая дата.",
             TestName = "Негативный тест сеттера Birthday: слишком маленькая дата.")]
-        [Test(Description = "Негативный тест сеттера Birthday: присвоение некорректных дат.")]
+
+        
+        
         public void BirthdaySetNegative(string incorrect, string message)
         {
             var date = DateTime.Parse(incorrect);
