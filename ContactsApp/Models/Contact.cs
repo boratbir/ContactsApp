@@ -5,7 +5,7 @@ namespace ContactsApp.Models
     /// <summary>
     /// Содержит информацию о контакте
     /// </summary>
-    public class Contact : ICloneable
+    public class Contact : ICloneable, IEquatable<Contact>
     {
         /// <summary>
         /// Минимально допустимая дата рождения.
@@ -154,6 +154,40 @@ namespace ContactsApp.Models
                 VkId = VkId,
                 Birthday = Birthday
             };
+        }
+
+        public bool Equals(Contact other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return _lastName == other._lastName && 
+                   _firstName == other._firstName &&
+                   _birthday.Equals(other._birthday) && 
+                   _vkId == other._vkId && 
+                   _email == other._email && 
+                   Equals(_phoneNumber, other._phoneNumber);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Contact) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (_lastName != null ? _lastName.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (_firstName != null ? _firstName.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ _birthday.GetHashCode();
+                hashCode = (hashCode * 397) ^ (_vkId != null ? _vkId.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (_email != null ? _email.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (_phoneNumber != null ? _phoneNumber.GetHashCode() : 0);
+                return hashCode;
+            }
         }
     }
 }

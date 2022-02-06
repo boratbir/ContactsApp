@@ -11,10 +11,7 @@ namespace ContactsApp.UnitTests
     public class PhoneNumberTest
     {
         private PhoneNumber _phoneNumber;
-
-        /// <summary>
-        /// Конструктор теста PhoneNumber
-        /// </summary>
+        
         [SetUp]
         public void Init()
         {

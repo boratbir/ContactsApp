@@ -11,10 +11,7 @@ namespace ContactsApp.UnitTests
     public class ContactTest
     {
         private Contact _contact;
-
-        /// <summary>
-        /// Конструктор теста Contact
-        /// </summary>
+        
         [SetUp]
         public void Init()
         {
@@ -30,7 +27,6 @@ namespace ContactsApp.UnitTests
         {
             var lastName = "ФАМИЛИЯ";
             _contact.LastName = lastName;
-            var actual = _contact.LastName;
             Assert.AreEqual(lastName, _contact.LastName, "Геттер LastName вернул неправильное значение");
         }
 
