@@ -53,6 +53,9 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxVk = new System.Windows.Forms.TextBox();
+            this.panelBirthdays = new System.Windows.Forms.Panel();
+            this.labelBirthdays = new System.Windows.Forms.Label();
+            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
             this.leftTablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -62,17 +65,15 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panelBirthdays = new System.Windows.Forms.Panel();
-            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
-            this.labelBirthdays = new System.Windows.Forms.Label();
+            this.labelBirthday = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.tableLayoutPanellnfo.SuspendLayout();
+            this.panelBirthdays.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).BeginInit();
             this.leftTablePanel.SuspendLayout();
             this.buttonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider)).BeginInit();
-            this.panelBirthdays.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -160,6 +161,7 @@
             this.tableLayoutPanellnfo.ColumnCount = 2;
             this.tableLayoutPanellnfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanellnfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanellnfo.Controls.Add(this.labelBirthday, 0, 2);
             this.tableLayoutPanellnfo.Controls.Add(this.labelVk, 0, 5);
             this.tableLayoutPanellnfo.Controls.Add(this.labelFirstName, 0, 1);
             this.tableLayoutPanellnfo.Controls.Add(this.labelLastName, 0, 0);
@@ -308,6 +310,34 @@
             this.textBoxVk.Size = new System.Drawing.Size(373, 26);
             this.textBoxVk.TabIndex = 11;
             // 
+            // panelBirthdays
+            // 
+            this.tableLayoutPanellnfo.SetColumnSpan(this.panelBirthdays, 2);
+            this.panelBirthdays.Controls.Add(this.labelBirthdays);
+            this.panelBirthdays.Controls.Add(this.pictureBoxInfo);
+            this.panelBirthdays.Location = new System.Drawing.Point(3, 448);
+            this.panelBirthdays.Name = "panelBirthdays";
+            this.panelBirthdays.Size = new System.Drawing.Size(539, 142);
+            this.panelBirthdays.TabIndex = 12;
+            // 
+            // labelBirthdays
+            // 
+            this.labelBirthdays.Location = new System.Drawing.Point(145, 3);
+            this.labelBirthdays.Name = "labelBirthdays";
+            this.labelBirthdays.Size = new System.Drawing.Size(391, 136);
+            this.labelBirthdays.TabIndex = 1;
+            this.labelBirthdays.Text = "Именинники: ";
+            // 
+            // pictureBoxInfo
+            // 
+            this.pictureBoxInfo.BackgroundImage = global::ContactsApp.UI.Properties.Resources.Info;
+            this.pictureBoxInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxInfo.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxInfo.Name = "pictureBoxInfo";
+            this.pictureBoxInfo.Size = new System.Drawing.Size(136, 136);
+            this.pictureBoxInfo.TabIndex = 0;
+            this.pictureBoxInfo.TabStop = false;
+            // 
             // leftTablePanel
             // 
             this.leftTablePanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -405,33 +435,16 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // panelBirthdays
+            // labelBirthday
             // 
-            this.tableLayoutPanellnfo.SetColumnSpan(this.panelBirthdays, 2);
-            this.panelBirthdays.Controls.Add(this.labelBirthdays);
-            this.panelBirthdays.Controls.Add(this.pictureBoxInfo);
-            this.panelBirthdays.Location = new System.Drawing.Point(3, 448);
-            this.panelBirthdays.Name = "panelBirthdays";
-            this.panelBirthdays.Size = new System.Drawing.Size(539, 142);
-            this.panelBirthdays.TabIndex = 12;
-            // 
-            // pictureBoxInfo
-            // 
-            this.pictureBoxInfo.BackgroundImage = global::ContactsApp.UI.Properties.Resources.Info;
-            this.pictureBoxInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxInfo.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxInfo.Name = "pictureBoxInfo";
-            this.pictureBoxInfo.Size = new System.Drawing.Size(136, 136);
-            this.pictureBoxInfo.TabIndex = 0;
-            this.pictureBoxInfo.TabStop = false;
-            // 
-            // labelBirthdays
-            // 
-            this.labelBirthdays.Location = new System.Drawing.Point(145, 3);
-            this.labelBirthdays.Name = "labelBirthdays";
-            this.labelBirthdays.Size = new System.Drawing.Size(391, 136);
-            this.labelBirthdays.TabIndex = 1;
-            this.labelBirthdays.Text = "Именинники: ";
+            this.labelBirthday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelBirthday.Location = new System.Drawing.Point(4, 84);
+            this.labelBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBirthday.Name = "labelBirthday";
+            this.labelBirthday.Size = new System.Drawing.Size(156, 31);
+            this.labelBirthday.TabIndex = 13;
+            this.labelBirthday.Text = "Дата рождения:";
+            this.labelBirthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainForm
             // 
@@ -449,15 +462,19 @@
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanellnfo.ResumeLayout(false);
             this.tableLayoutPanellnfo.PerformLayout();
+            this.panelBirthdays.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).EndInit();
             this.leftTablePanel.ResumeLayout(false);
             this.leftTablePanel.PerformLayout();
             this.buttonsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider)).EndInit();
-            this.panelBirthdays.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label labelBirthday;
+
+        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Label labelBirthdays;
 

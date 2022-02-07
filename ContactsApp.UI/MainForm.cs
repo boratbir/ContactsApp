@@ -143,7 +143,7 @@ namespace ContactsApp.UI
         {
             buttonEdit.Enabled = enabled;
             buttonDelete.Enabled = enabled;
-            editMenuItem.Enabled = enabled;
+            editContactMenuItem.Enabled = enabled;
             deleteContactMenuItem.Enabled = enabled;
         }
         
