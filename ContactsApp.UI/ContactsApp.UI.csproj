@@ -108,12 +108,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rmdir /s /q "$(SolutionDir)InstallScripts\Release"
-mkdir "$(SolutionDir)InstallScripts\Release"
-rmdir /s /q "$(SolutionDir)InstallScripts\Installers"
-mkdir "$(SolutionDir)InstallScripts\Installers"
-xcopy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)InstallScripts\Release\"
-xcopy "$(ProjectDir)$(OutDir)*.exe" "$(SolutionDir)InstallScripts\Release\"
-"$(SolutionDir)packages\Tools.InnoSetup.6.1.2\tools\ISCC.exe" "$(SolutionDir)InstallScripts\ContactsApp.iss"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
